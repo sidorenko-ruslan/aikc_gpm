@@ -8,4 +8,33 @@
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'
     = javascript_include_tag 'application', 'data-turbolinks-track': 'reload'
   %body
-    = yield
+    %div#grid
+      %div#page-header
+        %div.logo
+          %a.logo{ href: root_path }
+            ООО
+            %span.pink "АИКЦ
+            %span.gray ГПМ"
+        %ul.menu
+          %li
+            %a{ href: 'index' }
+              Главная
+          %li
+            %a{ href: 'about' }
+              Немного о нас
+          %li
+            %a{ href: 'development' }
+              Разработки
+          %li
+            %a{ href: 'contacts' }
+              Контакты
+
+
+      %div#page-content
+        = yield
+
+      %div#page-footer
+        %p " © 2020 "
+        %a{ href: '#' } Sidorenko
+
+    
